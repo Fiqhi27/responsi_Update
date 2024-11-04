@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <title>Form</title>   
+      <!-- --------------- HEADER --------------- -->
+      <nav id="header">
+        <div class="nav-logo">
+          <p class="nav-name">Tutorial</p>
+          <span>.</span>
+        </div>
+        <div class="nav-menu" id="myNavMenu">
+          <ul class="nav_menu_list">
+            <li class="nav_list">
+              <a href="table.html" class="nav-link" target="_blank">TABLE</a>
+              <div class="circle"></div>
+            <li class="nav_list">
+              <a href="form.html" class="nav-link" target="_blank">FORM</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="api.html" class="nav-link" target="_blank">API</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="canvas.html" class="nav-link" target="_blank">CANVAS</a>
+              <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+              <a href="deploy.html" class="nav-link" target="_blank">DEPLOY</a>
+              <div class="circle"></div>
+            <li class="nav_list">
+              <a class="nav-link" href="#Hasil">EDIT</a>
+              <div class="circle"></div>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="nav-button">
+          <button class="btn"><a href="https://fiqhi27.github.io/responsi-WebDesign7">
+              Back Home
+            </a>
+          </button>
+        </div>
+        <div class="nav-menu-btn">
+          <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+        </div>
+      </nav>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      font-size: 18px; /* Increased font size */
+      /* Optional: Background color for contrast */
+      color: #ffffff; /* Text color */
+    }
+    .container {
+      max-width: 800px; /* Set a maximum width for the container */
+      margin: 0 auto; /* Center the container */
+      padding: 20px; /* Add padding inside the container */
+      text-align: left; /* Align text to the left */
+    }
+    h1, h2 {
+      color: #ffffff;
+    }
+    p {
+      margin: 10px 0;
+      color: #ffffff;
+    }
+    li {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrapper">
+    <section class="section" id="form">
+      <div class="top-header">
+        <div class="container"> <!-- New container for content -->
+          <h1>Belajar HTML #11: Cara Membuat Form pada HTML</h1>
+          <p><strong>Author:</strong> Fiqhi Fahriansyah</p>
+          <p><strong>Tanggal:</strong> 4 November 2024</p>
+          <p><strong>Tags:</strong> #HTML5 #HTML</p>
+          
+          <p>Web tidak hanya digunakan untuk menampilkan informasi saja…</p>
+          <p>…Web juga digunakan untuk mengambil informasi atau data dari pengunjung.</p>
+          <p>Salah satu cara untuk mengambil informasi dari pengunjung ialah menggunakan form.</p>
+          <p>Form dalam web bisa disamakan dengan formulir di dunia nyata.</p>
+          <p>Form dapat diisi, kemudian diproses dengan program tertentu.</p>
+          <p>Pada tutorial ini, kita akan belajar cara membuat form di HTML.</p>
+          <p>Hanya membuat saja ya…</p>
+          <p>Tidak sampai memproses datanya.</p>
+          <p>Karena itu masuk ke dalam topik pembahasan yang lain.</p>
+          <p>Baiklah…</p>
+          <h2>Cara Membuat Form di HTML</h2>
+          <p>Form di HTML dapat kita buat dengan tag <code>&lt;form&gt;</code>.</p>
+          <p>Tag ini memiliki beberapa atribut yang harus diberikan, seperti:</p>
+          <ul>
+            <li><strong>action</strong> untuk menentukan aksi yang akan dilakukan saat data dikirim;</li>
+            <li><strong>method</strong> metode pengiriman data.</li>
+          </ul>
+        
+          <div class="tutorial-box">
+            <p>Contoh:</p>
+          <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
+            <form action="proses.php" method="GET">
+              <!-- form field di sini -->
+              </form>
+            </textarea>
+          </div>
+            <button onclick="copyCode('contentForm')">Copy</button>
+        </div> <!-- End of container -->
+      </div>
+      <!-- Card Style untuk Latihan Page Margin -->
+      <div class="tutorial-box">
+        <h2>Latihan Membuat Form Menggunakan HTML</h2>
+        <p>Latihan sederhana untuk membuat suatu form menggunakan perintah dasar</p>
+
+        <h3>Code:</h3>
+        <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Form Login</title>
+            </head>
+            <body>
+              
+                <form action="login.php" method="POST">
+                    <fieldset>
+                    <legend>Login</legend>
+                    <p>
+                      <label>Username:</label>
+                      <input type="text" name="username" placeholder="username..." />
+                  </p>
+                  <p>
+                      <label>Password:</label>
+                      <input type="password" name="password" placeholder="password..." />
+                  </p>
+                  <p>
+                      <label><input type="checkbox" name="remember" value="remember" /> Remember me</label>
+                  </p>
+                  <p>
+                      <input type="submit" name="submit" value="Login" />
+                  </p>
+                  </fieldset>
+              </form>
+          </body>
+          </html>
+      </textarea>
+      <button onclick="copyCode('contentForm')">Copy</button>
+    </div>
+
+    <div class="output-box">
+      <h3>Hasil:</h3>
+      <img src="assets/images/Hasil-form .jpg" alt="Hasil Form" width="500">
+    </div>
+  </section>
+</main>
+
+<script>
+  function copyCode(textareaId) {
+    // Get the textarea element
+    var textarea = document.getElementById(textareaId);
+    
+    // Select the text in the textarea
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text to the clipboard
+    document.execCommand("copy");
+
+    // Alert the user that the text has been copied (optional)
+    alert("Code copied to clipboard!");
+  }
+</script>
+</body>
+
+</html>

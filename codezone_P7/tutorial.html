@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <title>Tutorial</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- --------------- HEADER --------------- -->
+    <nav id="header">
+      <div class="nav-logo">
+        <p class="nav-name">Tutorial</p>
+        <span>.</span>
+      </div>
+      <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+          <li class="nav_list">
+            <a href="table.html" class="nav-link" target="_blank">TABLE</a>
+            <div class="circle"></div>
+          <li class="nav_list">
+            <a href="form.html" class="nav-link" target="_blank">FORM</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="api.html" class="nav-link" target="_blank">API</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="canvas.html" class="nav-link" target="_blank">CANVAS</a>
+            <div class="circle"></div>
+          </li>
+          <li class="nav_list">
+            <a href="deploy.html" class="nav-link" target="_blank">DEPLOY</a>
+            <div class="circle"></div>
+          <li class="nav_list">
+            <a class="nav-link" href="#Hasil">EDIT</a>
+            <div class="circle"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-button">
+        <button class="btn"><a href="https://fiqhi27.github.io/responsi-WebDesign7">
+            Back Home
+          </a>
+        </button>
+      </div>
+      <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+      </div>
+    </nav>
+
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+      <!-- -------------- FEATURED BOX ---------------- -->
+      <section class="featured-box" id="home">
+        <div class="featured-text">
+          <div class="featured-text-card">
+            <span>Fiqhi Fahriansyah</span>
+          </div>
+          <div class="featured-name">
+            <p>MAU BELAJAR? <span class="typedText"></span></p>
+          </div>
+          <div class="featured-text-info">
+            <p>
+              Disini aja
+            </p>
+          </div>
+          <div class="featured-text-btn">
+            <button class="btn"><a href="https://www.youtube.com/@fiqhifahriansyah2151">
+                BELAJAR BERSAMA FIQHI
+              </a>
+            </button>
+          </div>
+          <div class="social_icons">
+            <div class="icon"><a href="https://www.instagram.com/fiqhi_fahriansyah?igsh=MXZsNzFwaXFzaWI1dg== "><i
+                  class="uil uil-instagram"></i></div></a>
+            <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+            <div class="icon"><i class="uil uil-dribbble"></i></div>
+            <div class="icon"><i class="uil uil-github-alt"></i></div>
+          </div>
+        </div>
+        <div class="featured-image">
+          <div class="image">
+            <img src="assets/images/FQ.png" alt="avatar" />
+          </div>
+        </div>
+        <div class="scroll-icon-box">
+          <a href="#table" class="scroll-btn">
+            <i class="uil uil-mouse-alt"></i>
+            <p>Scroll Down</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- COBA JALANKAN CODENYA DISNI -->
+      <main class="wrapper">
+        <section class="section" id="Hasil">
+          <div class="tutorial-box">
+            <h2>Live HTML, CSS, and JavaScript Editor</h2>
+            <p>
+              Input your HTML, CSS, and JavaScript code below and see the result
+              instantly.
+            </p>
+
+            <!-- HTML Editor -->
+            <div class="code-editor">
+              <h3>HTML</h3>
+              <textarea id="htmlCode2" placeholder="Write your HTML here..." rows="5"></textarea>
+            </div>
+
+            <!-- CSS Editor -->
+            <div class="code-editor">
+              <h3>CSS</h3>
+              <textarea id="cssCode2" placeholder="Write your CSS here..." rows="5"></textarea>
+            </div>
+
+            <!-- JavaScript Editor -->
+            <div class="code-editor">
+              <h3>JavaScript</h3>
+              <textarea id="jsCode2" placeholder="Write your JavaScript here..." rows="5"></textarea>
+            </div>
+
+            <button class="run-button" onclick="runCode('2')">Run Code</button>
+            <button class="undo-button" onclick="clearCode('2')">
+              Clear Code
+            </button>
+
+            <h3>Output:</h3>
+            <iframe id="outputFrame2" class="preview" title="Code Output"></iframe>
+          </div>
+        </section>
+      </main>
+
+      <!-- Main JavaScript -->
+      <script src="assets/js/main.js"></script>
+      <script>
+        function runCode(editorId) {
+          // Get values from HTML, CSS, and JS text areas for each editor
+          const htmlCode = document.getElementById("htmlCode" + editorId).value;
+          const cssCode = `<style>${document.getElementById("cssCode" + editorId).value
+            }</style>`;
+          const jsCode = `<script>${document.getElementById("jsCode" + editorId).value
+            }<\/script>`;
+
+          // Create a complete HTML content with CSS and JS
+          const outputContent = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          ${cssCode}
+        </head>
+        <body>
+          ${htmlCode}
+          ${jsCode}
+        </body>
+        </html>
+      `;
+
+          // Update iframe content with the new HTML, CSS, and JS code
+          const iframe = document.getElementById("outputFrame" + editorId)
+            .contentWindow.document;
+          iframe.open();
+          iframe.write(outputContent);
+          iframe.close();
+        }
+
+        function clearCode(editorId) {
+          // Clear the HTML, CSS, and JavaScript input areas and output frame for each editor
+          document.getElementById("htmlCode" + editorId).value = "";
+          document.getElementById("cssCode" + editorId).value = "";
+          document.getElementById("jsCode" + editorId).value = "";
+          document.getElementById(
+            "outputFrame" + editorId
+          ).contentWindow.document.body.innerHTML = "";
+        }
+      </script>
+
+      <!-- --------------- FOOTER --------------- -->
+      <footer>
+        <div class="top-footer">
+          <p>Fiqhi Fahriansyah</p>
+        </div>
+        <div class="middle-footer">
+          <ul class="footer-menu">
+            <li class="footer_menu_list">
+              <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#projects">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-social-icons">
+          <div class="icon"><i class="uil uil-instagram"></i></div>
+          <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+          <div class="icon"><i class="uil uil-dribbble"></i></div>
+          <div class="icon"><i class="uil uil-github-alt"></i></div>
+        </div>
+        <div class="bottom-footer">
+          <p>
+            Copyright &copy;
+            <a href="#home" style="text-decoration: none">Fiqhi</a> - All
+            rights reserved
+          </p>
+        </div>
+      </footer>
+  </div>
+
+  <!-- ----- TYPING JS Link ----- -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- ----- SCROLL REVEAL JS Link----- -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <!-- ----- MAIN JS ----- -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

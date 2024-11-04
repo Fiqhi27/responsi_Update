@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <title>Table</title>
+</head>
+
+<body>
+  <!-- -------------- TABLE BOX ---------------- -->
+  <main class="wrapper">
+    <section class="section" id="table">
+      <div class="top-header">
+        <h1>Tutorial: Membuat Table</h1>
+      </div>
+      <!-- Card Style untuk Latihan Page Margin -->
+      <div class="tutorial-box">
+        <h2>Latihan Membuat Table Menggunakan HTML</h2>
+        <p>
+          Latihan sederhana untuk membuat suatu table menggunakan perintah dasar
+        </p>
+
+        <h3>Code:</h3>
+        <textarea class="editor" rows="20" id="contentTable" placeholder="Masukkan kode HTML dan CSS di sini">
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <caption>Contoh Tabel</caption>
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Kota</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>Jakarta</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Bandung</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>Surabaya</td>
+        </tr>
+    </tbody>
+</table>
+        </textarea>
+        <button onclick="copyCode('contentTable')">Copy</button>
+      </div>
+
+      <div class="output-box">
+        <h3>Hasil:</h3>
+        <table border="1" style="width: 100%; border-collapse: collapse; color: white; background-color: black;">
+          <caption>Contoh Tabel</caption>
+          <thead>
+            <tr>
+              <th>Nama</th>
+              <th>Umur</th>
+              <th>Kota</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Alice</td>
+              <td>30</td>
+              <td>Jakarta</td>
+            </tr>
+            <tr>
+              <td>Bob</td>
+              <td>25</td>
+              <td>Bandung</td>
+            </tr>
+            <tr>
+              <td>Charlie</td>
+              <td>35</td>
+              <td>Surabaya</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function copyCode(textareaId) {
+      // Get the textarea element
+      var textarea = document.getElementById(textareaId);
+      
+      // Select the text in the textarea
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text to the clipboard
+      document.execCommand("copy");
+
+      // Alert the user that the text has been copied (optional)
+      alert("Code copied to clipboard!");
+    }
+  </script>
+</body>
+
+</html>

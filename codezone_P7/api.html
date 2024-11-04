@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- --------- UNICONS ---------- -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+
+  <!-- --------- CSS ---------- -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- --------- FAVICON ---------- -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+
+  <title>API HTML</title>   
+ 
+ <!-- -------------- API BOX ---------------- -->
+   <main class="wrapper">
+    <section class="section" id="api">
+        <div class="top-header">
+            <h1>Tutorial: API HTML</h1>
+        </div>
+        <!-- Card Style untuk Latihan Page Margin -->
+        <div class="tutorial-box">
+            <h2>Latihan Page Margin dengan CSS Editor</h2>
+            <p>
+                Latihan untuk mengatur margin, indentasi, dan tata letak halaman
+                menggunakan HTML dan CSS langsung dari editor.
+            </p>
+
+            <h3>Code:</h3>
+            <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+<!-- Contoh Kode API -->
+            </textarea>
+            <button onclick="copyCode('contentAPI')">Copy</button>
+        </div>
+    </section>
+    <script>
+        function copyCode(textareaId) {
+          // Get the textarea element
+          var textarea = document.getElementById(textareaId);
+          
+          // Select the text in the textarea
+          textarea.select();
+          textarea.setSelectionRange(0, 99999); // For mobile devices
+    
+          // Copy the text to the clipboard
+          document.execCommand("copy");
+    
+          // Alert the user that the text has been copied (optional)
+          alert("Code copied to clipboard!");
+        }
+      </script>
+</main>
