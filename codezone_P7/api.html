@@ -14,9 +14,9 @@
   <!-- --------- FAVICON ---------- -->
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 
-  <title>API HTML</title>   
-   <!-- --------------- HEADER --------------- -->
-   <nav id="header">
+  <title>API HTML</title>
+  <!-- --------------- HEADER --------------- -->
+  <nav id="header">
     <div class="nav-logo">
       <p class="nav-name">Tutorial</p>
       <span>.</span>
@@ -59,41 +59,287 @@
     </div>
   </nav>
 
- <!-- -------------- API BOX ---------------- -->
-   <main class="wrapper">
-    <section class="section" id="api">
-        <div class="top-header">
-            <h1>Tutorial: API HTML</h1>
-        </div>
-        <!-- Card Style untuk Latihan Page Margin -->
-        <div class="tutorial-box">
-            <h2>Latihan Page Margin dengan CSS Editor</h2>
-            <p>
-                Latihan untuk mengatur margin, indentasi, dan tata letak halaman
-                menggunakan HTML dan CSS langsung dari editor.
-            </p>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      font-size: 18px;
+      /* Increased font size */
+      /* Optional: Background color for contrast */
+      color: #ffffff;
+      /* Text color */
+    }
 
-            <h3>Code:</h3>
-            <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
-<!-- Contoh Kode API -->
+    .container {
+      max-width: 800px;
+      /* Set a maximum width for the container */
+      margin: 0 auto;
+      /* Center the container */
+      padding: 20px;
+      /* Add padding inside the container */
+      text-align: left;
+      /* Align text to the left */
+    }
+
+    h1,
+    h2 {
+      color: #ffffff;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #ffffff;
+    }
+
+    li {
+      color: #ffffff;
+    }
+  </style>
+
+  <!-- -------------- API BOX ---------------- -->
+  <main class="wrapper">
+    <section class="section" id="api">
+      <div class="top-header">
+        <h1>API Web - Pendahuluan</h1>
+      </div>
+      <p>Web API adalah impian pengembang.</p>
+      <ul>
+        <li>Ini dapat memperluas fungsionalitas browser</li>
+        <li>Ini dapat sangat menyederhanakan fungsi yang kompleks</li>
+        <li>Ini dapat memberikan sintaksis yang mudah untuk kode yang kompleks</li>
+      </ul>
+
+      <h2>Apa itu Web API?</h2>
+      <p>API merupakan singkatan dari Application Programming Interface.</p>
+      <p>Web API adalah antarmuka pemrograman aplikasi untuk Web.</p>
+      <p>API Browser dapat memperluas fungsionalitas browser web.</p>
+      <p>API Server dapat memperluas fungsionalitas server web.</p>
+
+      <h2>API Peramban</h2>
+      <p>Semua browser memiliki seperangkat API Web bawaan untuk mendukung operasi yang kompleks, dan untuk membantu
+        mengakses data.</p>
+      <p>Misalnya, API Geolokasi dapat mengembalikan koordinat lokasi browser.</p>
+
+      <div class="tutorial-box">
+        <h2>Contoh</h2>
+        <p>
+          Dapatkan lintang dan bujur posisi pengguna:</p>
+        <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+          const myElement = document.getElementById("demo");
+
+          function getLocation() {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+              myElement.innerHTML = "Geolocation is not supported by this browser.";
+            }
+          }
+          
+          function showPosition(position) {
+            myElement.innerHTML = "Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+          }
             </textarea>
-            <button onclick="copyCode('contentAPI')">Copy</button>
-        </div>
+        <button onclick="copyCode('contentAPI')">Copy</button>
+      </div>
+
+      <h2>API Pihak Ketiga</h2>
+      <p>API pihak ketiga tidak terpasang di peramban Anda.</p>
+      <p>Untuk menggunakan API ini, Anda harus mengunduh kode dari Web.</p>
+      <h3>Contoh:</h3>
+      <ul>
+        <li>API YouTube - Memungkinkan Anda menampilkan video di situs web.</li>
+        <li>Twitter API - Memungkinkan Anda menampilkan Tweet di situs web.</li>
+        <li>API Facebook - Memungkinkan Anda menampilkan info Facebook di situs web.</li>
+      </ul>
+
+      <!-- web api form -->
+
+      <div class="top-header">
+      
+        <h1>API Validasi JavaScript</h1>
+      </div>
+      <h2>Metode Validasi Kendala DOM</h2>
+      
+      <table border="1">
+          <thead>
+              <tr>
+                  <th>Property</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>checkValidity()</td>
+                  <td>Returns true if an input element contains valid data.</td>
+              </tr>
+              <tr>
+                  <td>setCustomValidity()</td>
+                  <td>Sets the validationMessage property of an input element.</td>
+              </tr>
+          </tbody>
+      </table>
+  
+      <p>Jika kolom input berisi data tidak valid, tampilkan pesan:</p>
+
+      <div class="tutorial-box">
+        <h2>Metode checkValidity()</h2>
+     
+        <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+          <input id="id1" type="number" min="100" max="300" required>
+          <button onclick="myFunction()">OK</button>
+          
+          <p id="demo"></p>
+          
+          <script>
+          function myFunction() {
+            const inpObj = document.getElementById("id1");
+            if (!inpObj.checkValidity()) {
+              document.getElementById("demo").innerHTML = inpObj.validationMessage;
+            }
+          }
+          </script>
+            </textarea>
+        <button onclick="copyCode('contentAPI')">Copy</button>
+      </div>  
+
+      <h2>Metode Validasi Kendala DOM</h2>
+      <table border="1">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Validity</td>
+                <td>Contains boolean properties related to the validity of an input element.</td>
+            </tr>
+            <tr>
+                <td>validationMessage</td>
+                <td>Contains the message a browser will display when the validity is false.</td>
+            </tr>
+            <tr>
+                <td>willValidate</td>
+                <td>Indicates if an input element will be validated.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>Properti Validitas</h1>
+<p>Properti validitas elemen input berisi sejumlah properti yang terkait dengan validitas data:</p>
+
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>customError</td>
+            <td>Set to true, if a custom validity message is set.</td>
+        </tr>
+        <tr>
+            <td>patternMismatch</td>
+            <td>Set to true, if an element's value does not match its pattern attribute.</td>
+        </tr>
+        <tr>
+            <td>rangeOverflow</td>
+            <td>Set to true, if an element's value is greater than its max attribute.</td>
+        </tr>
+        <tr>
+            <td>rangeUnderflow</td>
+            <td>Set to true, if an element's value is less than its min attribute.</td>
+        </tr>
+        <tr>
+            <td>stepMismatch</td>
+            <td>Set to true, if an element's value is invalid per its step attribute.</td>
+        </tr>
+        <tr>
+            <td>tooLong</td>
+            <td>Set to true, if an element's value exceeds its maxLength attribute.</td>
+        </tr>
+        <tr>
+            <td>typeMismatch</td>
+            <td>Set to true, if an element's value is invalid per its type attribute.</td>
+        </tr>
+        <tr>
+            <td>valueMissing</td>
+            <td>Set to true, if an element (with a required attribute) has no value.</td>
+        </tr>
+        <tr>
+            <td>valid</td>
+            <td>Set to true, if an element's value is valid.</td>
+        </tr>
+    </tbody>
+</table>
+  
+<div class="tutorial-box">
+  <p>Contoh</p>
+  <p>Jika angka pada kolom input lebih besar dari 100 (atribut input max ), tampilkan pesan:</p>
+  <h2>Properti rangeOverflow</h2>
+
+  <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+    <input id="id1" type="number" max="100">
+    <button onclick="myFunction()">OK</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      let text = "Value OK";
+      if (document.getElementById("id1").validity.rangeOverflow) {
+        text = "Value too large";
+      }
+    }
+    </script>
+      </textarea>
+  <button onclick="copyCode('contentAPI')">Copy</button>
+</div>  
+<p>Jika angka pada kolom input kurang dari 100 (atribut input min), tampilkan pesan:</p>
+
+<div class="tutorial-box">
+  <h2>Properti rangeUnderflow</h2>
+
+  <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+    <input id="id1" type="number" min="100">
+    <button onclick="myFunction()">OK</button>
+    
+    <p id="demo"></p>
+    
+    <script>
+    function myFunction() {
+      let text = "Value OK";
+      if (document.getElementById("id1").validity.rangeUnderflow) {
+        text = "Value too small";
+      }
+    }
+    </script>
+      </textarea>
+  <button onclick="copyCode('contentAPI')">Copy</button>
+</div>
+
     </section>
     <script>
-        function copyCode(textareaId) {
-          // Get the textarea element
-          var textarea = document.getElementById(textareaId);
-          
-          // Select the text in the textarea
-          textarea.select();
-          textarea.setSelectionRange(0, 99999); // For mobile devices
-    
-          // Copy the text to the clipboard
-          document.execCommand("copy");
-    
-          // Alert the user that the text has been copied (optional)
-          alert("Code copied to clipboard!");
-        }
-      </script>
-</main>
+      function copyCode(textareaId) {
+        // Get the textarea element
+        var textarea = document.getElementById(textareaId);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand("copy");
+
+        // Alert the user that the text has been copied (optional)
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </main>

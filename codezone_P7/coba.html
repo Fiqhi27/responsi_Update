@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Deploy Web menggunakan GitHub dengan Git</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <nav id="header">
+        <div class="nav-logo">
+            <p class="nav-name">Tutorial Deploy</p>
+            <span>.</span>
+        </div>
+    </nav>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            font-size: 18px;
+            /* Increased font size */
+            /* Optional: Background color for contrast */
+            color: #ffffff;
+            /* Text color */
+        }
+
+        .container {
+            max-width: 800px;
+            /* Set a maximum width for the container */
+            margin: 0 auto;
+            /* Center the container */
+            padding: 20px;
+            /* Add padding inside the container */
+            text-align: left;
+            /* Align text to the left */
+        }
+
+        h1,
+        h2 {
+            color: #ffffff;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        li {
+            color: #ffffff;
+        }
+    </style>
+
+    <main class="wrapper">
+        <section class="section" id="deploy">
+            <div class="top-header">
+                <h1>Tutorial: Deploy Web menggunakan GitHub Pages dengan Git</h1>
+            </div>
+
+            <h2>Langkah 1: Siapkan Akun GitHub</h2>
+            <p>Buat akun GitHub jika Anda belum memilikinya. Kunjungi <a href="https://github.com/">GitHub</a> untuk
+                mendaftar.</p>
+
+            <h2>Langkah 2: Instal Git</h2>
+            <p>Pastikan Anda telah menginstal Git di komputer Anda. Anda dapat mengunduhnya dari <a
+                    href="https://git-scm.com/">situs resmi Git</a>.</p>
+
+            <h2>Langkah 3: Buat Repository Baru di GitHub</h2>
+            <ol>
+                <li>Masuk ke GitHub dan klik pada tombol "+" di pojok kanan atas, kemudian pilih "New repository".</li>
+                <li>Berikan nama repository Anda (misalnya, <strong>my-website</strong>).</li>
+                <li>Pilih opsi "Public".</li>
+                <li>Klik "Create repository".</li>
+            </ol>
+
+            <h2>Langkah 4: Clone Repository ke Komputer Anda</h2>
+            <div style="background-color: #000000; padding: 10px; font-family: monospace;">
+                git clone https://github.com/<username>/my-website.git
+            </div>
+            </div>
+            </div>
+            <p>Gantilah <strong>&lt;username&gt;</strong> dengan username GitHub Anda.</p>
+
+            <h2>Langkah 5: Tambahkan File HTML Anda</h2>
+            <ol>
+                <li>Masuk ke direktori repository yang telah di-clone:</li>
+                <div style="background-color: #000000; padding: 10px; font-family: monospace;">
+                    cd my-website
+                </div>
+                <li>Buat file HTML (misalnya <strong>index.html</strong>) menggunakan editor teks pilihan Anda.</li>
+            </ol>
+
+            <h2>Langkah 6: Tambahkan dan Commit Perubahan</h2>
+            <div style="background-color: #000000; padding: 10px; font-family: monospace;">
+                git add index.html
+            </div> 
+            <div style="background-color: #000000; padding: 10px; font-family: monospace;">
+                git commit -m "Menambahkan file index.html"
+            </div>
+            <h2>Langkah 7: Push Perubahan ke GitHub</h2>
+            <div style="background-color: #000000; padding: 10px; font-family: monospace;">
+                git push origin main
+            </div>
+            <p>Gantilah <strong>main</strong> dengan <strong>master</strong> jika Anda menggunakan branch master.</p>
+
+            <h2>Langkah 8: Aktifkan GitHub Pages</h2>
+            <ol>
+                <li>Kembali ke repository di GitHub.</li>
+                <li>Klik pada tab "Settings".</li>
+                <li>Scroll ke bawah ke bagian "GitHub Pages".</li>
+                <li>Pilih branch (biasanya <strong>main</strong>) dan folder <strong>/ (root)</strong>.</li>
+                <li>Klik "Save".</li>
+            </ol>
+
+            <h2>Langkah 9: Akses Website Anda</h2>
+            <p>Setelah beberapa detik, Anda akan melihat URL di bagian GitHub Pages, yang akan terlihat seperti ini:</p>
+            <div style="background-color: #000000; padding: 10px; font-family: monospace;">
+                https://username.github.io/repository-name
+            </div>
+            <p>Gantilah <strong>&lt;username&gt;</strong> dan <strong>&lt;repository-name&gt;</strong> sesuai dengan
+                akun dan repository Anda.</p>
+
+            <h2>Tips Tambahan</h2>
+            <ul>
+                <li>Pastikan file <strong>index.html</strong> ada di root repository.</li>
+                <li>Anda dapat menambahkan file CSS, JavaScript, dan gambar dengan mengikuti langkah yang sama untuk
+                    upload file.</li>
+            </ul>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

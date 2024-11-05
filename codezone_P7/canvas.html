@@ -14,86 +14,190 @@
   <!-- --------- FAVICON ---------- -->
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
 
-  <title>Canvas</title>   
-    <!-- --------------- HEADER --------------- -->
-    <nav id="header">
-      <div class="nav-logo">
-        <p class="nav-name">Tutorial</p>
-        <span>.</span>
-      </div>
-      <div class="nav-menu" id="myNavMenu">
-        <ul class="nav_menu_list">
-          <li class="nav_list">
-            <a href="table.html" class="nav-link" target="_blank">TABLE</a>
-            <div class="circle"></div>
-          <li class="nav_list">
-            <a href="form.html" class="nav-link" target="_blank">FORM</a>
-            <div class="circle"></div>
-          </li>
-          <li class="nav_list">
-            <a href="api.html" class="nav-link" target="_blank">API</a>
-            <div class="circle"></div>
-          </li>
-          <li class="nav_list">
-            <a href="canvas.html" class="nav-link" target="_blank">CANVAS</a>
-            <div class="circle"></div>
-          </li>
-          <li class="nav_list">
-            <a href="deploy.html" class="nav-link" target="_blank">DEPLOY</a>
-            <div class="circle"></div>
-          <li class="nav_list">
-            <a href="tutorial.html#Hasil" class="nav-link">EDIT</a>
-            <div class="circle"></div>
-          </li>
-        </ul>
-      </div>
-  
-      <div class="nav-button">
-        <button class="btn"><a href="https://fiqhi27.github.io/responsi-WebDesign7">
-            Back Home
-          </a>
-        </button>
-      </div>
-      <div class="nav-menu-btn">
-        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
-      </div>
-    </nav>
- 
- <!-- canvas -->
-      <main class="wrapper">
-        <section class="section" id="canvas">
-          <div class="top-header">
-            <h1>Tutorial: Canvas</h1>
-          </div>
-          <!-- Card Style untuk Latihan Page Margin -->
-          <div class="tutorial-box">
-            <h2>Latihan Page Margin dengan CSS Editor</h2>
-            <p>
-              Latihan untuk mengatur margin, indentasi, dan tata letak halaman
-              menggunakan HTML dan CSS langsung dari editor.
-            </p>
+  <title>Canvas</title>
+  <!-- --------------- HEADER --------------- -->
+  <nav id="header">
+    <div class="nav-logo">
+      <p class="nav-name">Tutorial</p>
+      <span>.</span>
+    </div>
+    <div class="nav-menu" id="myNavMenu">
+      <ul class="nav_menu_list">
+        <li class="nav_list">
+          <a href="table.html" class="nav-link" target="_blank">TABLE</a>
+          <div class="circle"></div>
+        <li class="nav_list">
+          <a href="form.html" class="nav-link" target="_blank">FORM</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="api.html" class="nav-link" target="_blank">API</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="canvas.html" class="nav-link" target="_blank">CANVAS</a>
+          <div class="circle"></div>
+        </li>
+        <li class="nav_list">
+          <a href="deploy.html" class="nav-link" target="_blank">DEPLOY</a>
+          <div class="circle"></div>
+        <li class="nav_list">
+          <a href="tutorial.html#Hasil" class="nav-link">EDIT</a>
+          <div class="circle"></div>
+        </li>
+      </ul>
+    </div>
 
-            <h3>Code:</h3>
-            <textarea class="editor" rows="20" id="contentCanvas" placeholder="Masukkan kode HTML dan CSS di sini">
-<!-- Contoh Kode Canvas -->
-                </textarea>
-            <button onclick="copyCode('contentCanvas')">Copy</button>
-          </div>
-        </section>
-        <script>
-          function copyCode(textareaId) {
-            // Get the textarea element
-            var textarea = document.getElementById(textareaId);
-            
-            // Select the text in the textarea
-            textarea.select();
-            textarea.setSelectionRange(0, 99999); // For mobile devices
+    <div class="nav-button">
+      <button class="btn"><a href="https://fiqhi27.github.io/responsi-WebDesign7">
+          Back Home
+        </a>
+      </button>
+    </div>
+    <div class="nav-menu-btn">
+      <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+    </div>
+  </nav>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      font-size: 18px;
+      /* Increased font size */
+      /* Optional: Background color for contrast */
+      color: #ffffff;
+      /* Text color */
+    }
+
+    .container {
+      max-width: 800px;
+      /* Set a maximum width for the container */
+      margin: 0 auto;
+      /* Center the container */
+      padding: 20px;
+      /* Add padding inside the container */
+      text-align: left;
+      /* Align text to the left */
+    }
+
+    h1,
+    h2 {
+      color: #ffffff;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #ffffff;
+    }
+
+    li {
+      color: #ffffff;
+    }
+  </style>
+
+  <!-- -------------- API BOX ---------------- -->
+  <main class="wrapper">
+    <section class="section" id="canvas">
+      <div class="top-header">
+
+        <h1>Tutorial Kanvas HTML</h1>
+      </div>
+      <p>Elemen HTML <span class="highlight">&lt;canvas&gt;</span> digunakan untuk menggambar grafik pada halaman web.
+      </p>
+      <p>Elemen HTML <span class="highlight">&lt;canvas&gt;</span> hanyalah wadah untuk grafik. Anda harus menggunakan
+        skrip untuk benar-benar menggambar grafik.</p>
+      <p>Canvas memiliki beberapa metode untuk menggambar jalur, kotak, lingkaran, teks, dan menambahkan gambar.</p>
+      <p>Canvas didukung oleh semua peramban utama.</p>
+
+      <h2>Contoh Kanvas HTML</h2>
+      <img src="assets/images/canvas.jpg" alt="canvas" width="200">
+      <p>Grafik di atas dibuat dengan <span class="highlight">&lt;canvas&gt;</span>. Grafik ini berisi empat objek:
+        persegi panjang merah, persegi panjang gradien, persegi panjang multiwarna, dan teks multiwarna.</p>
+
+      <h2>Apa yang seharusnya sudah Anda ketahui</h2>
+      <p>Sebelum melanjutkan, Anda harus memiliki pemahaman dasar tentang hal berikut:</p>
+      <ul>
+        <li>Bahasa Pemrograman HTML</li>
+        <li>JavaScript Dasar</li>
+      </ul>
+      <p>Jika Anda ingin mempelajari mata pelajaran ini terlebih dahulu, temukan tutorialnya di Beranda kami.</p>
+
+      <h2>Apa itu HTML Canvas?</h2>
+      <p>Elemen HTML <span class="highlight">&lt;canvas&gt;</span> digunakan untuk menggambar grafik, dengan cepat,
+        melalui skrip (biasanya JavaScript).</p>
+      <p>Elemen tersebut <span class="highlight">&lt;canvas&gt;</span> hanyalah wadah untuk grafik. Anda harus
+        menggunakan skrip untuk benar-benar menggambar grafik tersebut.</p>
+      <p>Canvas memiliki beberapa metode untuk menggambar jalur, kotak, lingkaran, teks, dan menambahkan gambar.</p>
+
+      <h3>Kanvas HTML Dapat Menggambar Teks</h3>
+      <p>Kanvas dapat menggambar teks berwarna, dengan atau tanpa animasi.</p>
+
+      <h3>Kanvas HTML Dapat Menggambar Grafik</h3>
+      <p>Canvas memiliki fitur hebat untuk presentasi data grafis dengan gambaran grafik dan bagan.</p>
+
+      <h3>Kanvas HTML Dapat Dianimasikan</h3>
+      <p>Objek kanvas dapat bergerak. Segalanya mungkin: dari bola yang memantul sederhana hingga animasi yang rumit.
+      </p>
+
+      <h3>Kanvas HTML Bisa Interaktif</h3>
+      <p>Canvas dapat merespons peristiwa JavaScript.</p>
+      <p>Canvas dapat merespons tindakan pengguna apa pun (klik tombol, klik mouse, klik tombol, gerakan jari).</p>
+
+      <h3>Kanvas HTML Dapat Digunakan dalam Game</h3>
+      <p>Metode Canvas untuk animasi, menawarkan banyak kemungkinan untuk aplikasi permainan HTML.</p>
+
+
+
+
+      <div class="tutorial-box">
+        <h2>Contoh Kanvas</h2>
+        <p>Dalam HTML, suatu <span class="highlight">&lt;canvas&gt;</span> elemen terlihat seperti ini:</p>
+        <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+          <canvas id="myCanvas" width="200" height="100"></canvas>
+              </textarea>
+        <button onclick="copyCode('contentAPI')">Copy</button>
+      </div>
+
+      <h1>Tips Menggunakan Elemen Canvas</h1>
+    
+      <p>Atribut <strong>id</strong> diperlukan (sehingga dapat dirujuk oleh JavaScript).</p>
       
-            // Copy the text to the clipboard
-            document.execCommand("copy");
+      <p>Atribut <strong>width</strong> dan <strong>height</strong> menentukan ukuran kanvas.</p>
       
-            // Alert the user that the text has been copied (optional)
-            alert("Code copied to clipboard!");
-          }
-        </script>
-      </main>
+      <p><strong>Tips:</strong> Ukuran kanvas default adalah 300px (lebar) x 150px (tinggi).</p>
+      
+      <p><strong>Tip:</strong> Anda dapat memiliki beberapa <code>&lt;canvas&gt;</code> elemen pada satu halaman HTML.</p>
+      
+      <p>Secara default, <code>&lt;canvas&gt;</code> elemen tidak memiliki batas dan konten.</p>
+      
+      <p>Untuk menambahkan batas, gunakan <strong>style</strong> atribut:</p>
+
+      <div class="tutorial-box">
+        <h2>Contoh </h2>
+        <textarea class="editor" rows="20" id="contentAPI" placeholder="Masukkan kode HTML dan CSS di sini">
+          <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+              </textarea>
+        <button onclick="copyCode('contentAPI')">Copy</button>
+      </div>
+
+
+    </section>
+    <script>
+      function copyCode(textareaId) {
+        // Get the textarea element
+        var textarea = document.getElementById(textareaId);
+
+        // Select the text in the textarea
+        textarea.select();
+        textarea.setSelectionRange(0, 99999); // For mobile devices
+
+        // Copy the text to the clipboard
+        document.execCommand("copy");
+
+        // Alert the user that the text has been copied (optional)
+        alert("Code copied to clipboard!");
+      }
+    </script>
+  </main>

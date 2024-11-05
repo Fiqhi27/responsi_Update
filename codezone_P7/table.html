@@ -102,197 +102,105 @@
   <main class="wrapper">
     <section class="section" id="form">
       <div class="top-header"></div>
-        <div class="container"></div> <!-- New container for content -->
-          <div class="tags"></div>
-            <h1>Belajar HTML #11: Cara Membuat Form pada HTML</h1>
-            <p><strong>Author:</strong> Fiqhi Fahriansyah</p>
-            <p><strong>Tanggal:</strong> 4 November 2024</p>
-            <p><strong>Tags:</strong> #HTML5 #HTML</p>
-        
-        <p>Web tidak hanya digunakan untuk menampilkan informasi saja…</p>
-        <p>…Web juga digunakan untuk mengambil informasi atau data dari pengunjung.</p>
-        <p>Salah satu cara untuk mengambil informasi dari pengunjung ialah menggunakan form.</p>
-        <p>Form dalam web bisa disamakan dengan formulir di dunia nyata.</p>
-        <p>Form dapat diisi, kemudian diproses dengan program tertentu.</p>
-        <p>Pada tutorial ini, kita akan belajar cara membuat form di HTML.</p>
-        <p>Hanya membuat saja ya…</p>
-        <p>Tidak sampai memproses datanya.</p>
-        <p>Karena itu masuk ke dalam topik pembahasan yang lain.</p>
-        <p>Baiklah…</p>
-        <p>Mari kita mulai.</p>
+      <div class="container"></div> <!-- New container for content -->
+      <div class="tags"></div>
+      <h1>Belajar HTML: Cara Membuat Tabel di HTML</h1>
+      <h2>#HTML</h2>
+      <h2>Cara Membuat Tabel di HTML</h2>
+      <p>Salah satu cara atau format menampilkan informasi dalam web adalah dengan tabel.</p>
 
-        <h2>Cara Membuat Form di HTML</h2>
-        <p>Form di HTML dapat kita buat dengan tag <code>&lt;form&gt;</code>.</p>
-        <p>Tag ini memiliki beberapa atribut yang harus diberikan, seperti:</p>
-        <ul>
-          <li><strong>action</strong> untuk menentukan aksi yang akan dilakukan saat data dikirim;</li>
-          <li><strong>method</strong> metode pengiriman data.</li>
-
-
-          <div class="tutorial-box">
-            <p>Contoh:</p>
-            <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
-          <!-- TEXT -->
-            <form action="proses.php" method="GET">
-              <!-- form field di sini -->
-              </form>
-            </textarea>
-          </div>
-          <button onclick="copyCode('contentForm')">Copy</button>
-      </div> <!-- End of container -->
-      </div>
-      <h1>Penjelasan Atribut Action</h1>
-
-      <p>Untuk atribut <strong>action</strong>, kita dapat mengisinya dengan alaman URL dari endpoint yang akan
-        memproses form.</p>
-
-      <p>Secara sederhana, —pada contoh di atas— kita akan menyuruh <strong>file proses.php</strong> untuk memproses
-        data form.</p>
-
-      <p>Ini nanti akan kita pelajari pada PHP.</p>
-
-      <p>Kode HTML di atas, tidak akan menghasilkan apa-apa.</p>
-
-      <p>Karena kita belum membuat <strong>field</strong>-nya.</p>
-
-      <h2>Apa itu Field?</h2>
-      <p>Field adalah ruas yang dapat diisi dengan data.</p>
-
-
-      <div class="tutorial-box">
-
-        <h3>Contoh field:</h3>
-
-        <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
-          <input type="text" name="info" /></textarea>
-      </div>
-
-      <h1>Field memiliki beberapa atribut yang harus diberikan:</h1>
+      <h3>Tabel terdiri dari 4 unsur utama:</h3>
       <ul>
-        <li><strong>type</strong> merupakan type dari field.</li>
-        <li><strong>name</strong> merupakan nama dari field yang akan menjadi kunci dan variabel di dalam program.</li>
+        <li>Baris</li>
+        <li>Kolom</li>
+        <li>Sel</li>
+        <li>Garis</li>
       </ul>
 
-      <h2>Latihan: Membuat Form Login</h2>
-      <p>Sebagai latihan, mari kita buat form login.</p>
-      <p>Pada form login, terdapat beberapa field dan elemen:</p>
-      <ul>
-        <li>Field untuk input username atau email;</li>
-        <li>Field untuk input password;</li>
-        <li>Checkbox untuk remember me;</li>
-        <li>Tombol untuk login.</li>
-      </ul>
+      <div class="output-box">
+        <img src="assets/images/hasil-table1.png" alt="Hasil Form" width="500">
+      </div>
 
-      <!-- Card Style untuk Latihan Page Margin -->
-      <div class="tutorial-box">
-        <h3>Code:</h3>
+      <h3>Unsur Tabel</h3>
+      <p>Lalu, bagaimana cara membuat tabel di HTML?</p>
+      <p>Kita bisa membuatnya dengan beberapa tag yang sudah disediakan di HTML.</p>
+
+      <h3>Tag untuk Membuat Tabel di HTML</h3>
+      <p>Ada beberapa tag yang harus diingat untuk membuat tabel di HTML:</p>
+      <ul>
+        <li>Tag <code>&lt;table&gt;</code> untuk membungkus tabelnya</li>
+        <li>Tag <code>&lt;thead&gt;</code> untuk membungkus bagian kepala tabel</li>
+        <li>Tag <code>&lt;tbody&gt;</code> untuk membungkus bagian body dari tabel</li>
+        <li>Tag <code>&lt;tr&gt;</code> (tabel row) untuk membuat baris</li>
+        <li>Tag <code>&lt;td&gt;</code> (table data) untuk membuat sel</li>
+        <li>Tag <code>&lt;th&gt;</code> (table head) untuk membuat judul pada header</li>
+      </ul>
+      <p>Tag yang paling penting untuk diingat adalah tag <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, dan
+        <code>&lt;td&gt;</code>. Sementara tag yang lain adalah tambahan (opsional), boleh digunakan boleh tidak.</p>
+
+      <h3>Mari kita lihat contohnya:</h3>
+
+
+             <div class="tutorial-box">
+ <p>Contoh:</p>
         <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
-            <!DOCTYPE html>
-            <html>
-            <head>
-                <title>Form Login</title>
-            </head>
-            <body>
-              
-                <form action="login.php" method="POST">
-                    <fieldset>
-                    <legend>Login</legend>
-                    <p>
-                      <label>Username:</label>
-                      <input type="text" name="username" placeholder="username..." />
-                  </p>
-                  <p>
-                      <label>Password:</label>
-                      <input type="password" name="password" placeholder="password..." />
-                  </p>
-                  <p>
-                      <label><input type="checkbox" name="remember" value="remember" /> Remember me</label>
-                  </p>
-                  <p>
-                      <input type="submit" name="submit" value="Login" />
-                  </p>
-                  </fieldset>
-              </form>
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Belajar Membuat Tabel HTML</title>
+          </head>
+          <body>
+          
+              <table>
+                  <tr>
+                      <td>Baris 1 kolom 1</td>
+                      <td>baris 1 kolom 2</td>
+                  </tr>
+                  <tr>
+                      <td>Baris 2 kolom 1</td>
+                      <td>baris 2 kolom 2</td>
+                  </tr>
+              </table>
+          
           </body>
           </html>
-      </textarea>
+            </textarea>
         <button onclick="copyCode('contentForm')">Copy</button>
       </div>
-
       <div class="output-box">
         <h3>Hasil:</h3>
-        <img src="assets/images/Hasil-form .jpg" alt="Hasil Form" width="500">
+        <img src="assets/images/TABLE2.jpg" alt="Hasil table" width="500">
       </div>
-
-      <h1>Sekarang perhatikan!</h1>
-      <p>Pada kode di atas, kita membuat empat buah filed:</p>
-      <ul>
-        <li>input username dengan tipe text;</li>
-        <li>input password dengan tipe password;</li>
-        <li>input remember dengan tipe checkbox;</li>
-        <li>input submit dengan tipe submit;</li>
-      </ul>
-      <p>Lalu ketiga filed ini dibungkus ke dalam tag <code>&lt;fieldset&gt;</code>.</p>
-      <p>Nanti tag <code>&lt;fieldset&gt;</code> ini akan membuat sebuah garis.</p>
-      <p>Di dalam tag <code>&lt;fieldset&gt;</code>, kita membuat tag <code>&lt;legend&gt;</code> untuk memberikan teks
-        pada fieldset.</p>
-      <p>Lalu, perhatikan juga atribut yang digunakan pada setiap field.</p>
-      <ul>
-        <li>Atribut <strong>placeholder</strong> untuk menampilkan teks sementara (placeholder);</li>
-        <li>Atribut <strong>value</strong> untuk memberikan nilai default pada field.</li>
-      </ul>
-      <p>Setiap field kita bungkus dalam tag <code>&lt;p&gt;</code> agar terlihat rapi dan juga kita berikan sebuah
-        label dengan tag <code>&lt;label&gt;</code>.</p>
-
-      <h2>Latihan: Membuat Form Contact</h2>
-      <p>Latihan Selanjutnya, kita akan membuat form contact. Form ini berfungsi untuk menghubungi atau kontak admin.
-      </p>
+      </div> <!-- End of container -->
+      </div>
+      <p>Kok tidak ada garisnya?</p>
+      <p>Iya, karena kita tidak menambahkan atribut border pada tabelnya.</p>
+      <p>Agar Tabelnya memiliki garis, silakan tambahkan atribut <code>border="1"</code> di dalam tag <code>&lt;table&gt;</code>.</p>
+      <p>Sehingga akan menjadi seperti ini:</p>
 
       <div class="tutorial-box">
-
-        <h3>Silakan ikuti kode berikut:</h3>
-        <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
-
-        <!DOCTYPE html>
-<html>
-<head>
-    <title>Contact Us</title>
-</head>
-<body>
-    <form action="contact.php" method="POST">
-        <fieldset>
-        <legend>Contact</legend>
-        <p>
-            <label>Name:</label>
-            <input type="text" name="name" placeholder="your name..." />
-        </p>
-        <p>
-            <label>Subject:</label>
-            <input type="text" name="subject" placeholder="subject..." />
-        </p>
-        <p>
-            <label>Email:</label>
-            <input type="email" name="email" placeholder="your email..." />
-        </p>
-        <p>
-            <input type="submit" name="submit" value="Send" />
-        </p>
-        </fieldset>
-    </form>
-</body>
-</html>
-        
-      </textarea>
-
-        <button onclick="copyCode('contentForm')">Copy</button>
+               <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
+                <table border="1">
+                  <tr>
+                      <td>Baris 1 kolom 1</td>
+                      <td>baris 1 kolom 2</td>
+                  </tr>
+                  <tr>
+                      <td>Baris 2 kolom 1</td>
+                      <td>baris 2 kolom 2</td>
+                  </tr>
+              </table>
+              </textarea>
       </div>
+      <p>Nilai <strong>"1"</strong> pada atribut <code>border</code> adalah ukuran garisnya. Semakin besar ukurannya, maka akan semakin besar pula ukuran garisnya.</p>
+      <p>Nilai <strong>"1"</strong> adalah ukuran garis yang paling kecil.</p>
+      <p>Hasilnya akan seperti ini:</p>
+      
 
-      <div class="output-box">
-        <h3>Hasil:</h3>
-        <img src="assets/images/hasil-contact.jpg" alt="Hasil Form" width="500">
-      </div>
-
-
+      
+        <h3>Hasil : </h3>
+       <img src="assets/images/table3.jpg" alt="Hasil" width="500">
+       
 
     </section>
   </main>
