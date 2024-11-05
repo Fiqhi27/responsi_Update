@@ -4,11 +4,11 @@
 /* ----- VARIABLES ----- */
 :root {
   /* Background and Primary Colors */
-  --body-color: #121212; /* Hitam abu-abu pekat untuk latar belakang, memberikan kesan elegan dan profesional */
+  --body-color: #866363; /* Hitam abu-abu pekat untuk latar belakang, memberikan kesan elegan dan profesional */
   --color-white: #e2e2e2; /* Putih keabu-abuan yang lembut untuk mengurangi kontras yang terlalu tajam */
 
   /* Text Colors */
-  --text-color-second: #686868; /* Abu-abu terang untuk teks sekunder, jelas namun tetap elegan */
+  --text-color-second: #441e1e; /* Abu-abu terang untuk teks sekunder, jelas namun tetap elegan */
   --text-color-third: #32a6b3; /* Biru tegas untuk heading atau elemen penting, memberikan kesan formal dan berwibawa */
 
   /* Primary Button & Link Colors */
