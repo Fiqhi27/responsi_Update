@@ -100,7 +100,7 @@
 
 <body>
   <main class="wrapper">
-    <section class="section" id="form">
+    <section class="section" id="table">
       <div class="top-header"></div>
       <div class="container"></div> <!-- New container for content -->
       <div class="tags"></div>
@@ -179,7 +179,7 @@
       <p>Sehingga akan menjadi seperti ini:</p>
 
       <div class="tutorial-box">
-               <textarea class="editor" rows="20" id="contentForm" placeholder="Masukkan kode HTML dan CSS di sini">
+               <textarea class="editor" rows="20" id="contentForm2" placeholder="Masukkan kode HTML dan CSS di sini">
                 <table border="1">
                   <tr>
                       <td>Baris 1 kolom 1</td>
@@ -191,16 +191,57 @@
                   </tr>
               </table>
               </textarea>
+              <button onclick="copyCode('contentForm2')">Copy</button>
       </div>
       <p>Nilai <strong>"1"</strong> pada atribut <code>border</code> adalah ukuran garisnya. Semakin besar ukurannya, maka akan semakin besar pula ukuran garisnya.</p>
       <p>Nilai <strong>"1"</strong> adalah ukuran garis yang paling kecil.</p>
       <p>Hasilnya akan seperti ini:</p>
-      
-
-      
         <h3>Hasil : </h3>
        <img src="assets/images/table3.jpg" alt="Hasil" width="500">
        
+       <div class="tutorial-box">
+         <h3>Try It</h3>
+        <textarea class="editor" rows="20" id="contentTable" placeholder="Masukkan kode HTML dan CSS di sini">
+          <!DOCTYPE html>
+          <html>
+              <head>
+                  <title>Belajar Membuat Tabel HTML</title>
+          </head>
+          <body>
+              <table border="1">
+                  <tr>
+                      <th colspan="3" bgcolor="yellow">Produk Unggulan</th>
+                  </tr>
+                  <tr>
+                      <td rowspan="4">
+                          <img src="https://www.petanikode.com/img/bibit.png" width="200" />
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Nama</td>
+                      <td>Benih Kode</td>
+                  </tr>
+                  <tr>
+                      <td>Harga</td>
+                      <td>Rp 192.000</td>
+                  </tr>
+                  <tr>
+                      <td>Fitur</td>
+                      <td>
+                          <ul>
+                              <li>Dilengkapi Dokumentasi</li>
+                              <li>Ukuran: 31MB</li>
+                              <li>Masa Tanam: 6 Bulan</li>
+                              <li>Lisensi: MIT</li>
+                          </ul>
+                      </td>
+                  </tr>
+              </table>
+          
+          </body>
+          </html>
+       </textarea>
+       <button onclick="copyCode('contentTable')">Copy</button>
 
     </section>
   </main>
