@@ -160,25 +160,6 @@ html {
 }
 
 /* ---##-- REUSABLE CSS --##--- */
-
-
-/* coba sendiri */
-@media (max-width: 768px) {
-  /* Gaya untuk perangkat dengan lebar maksimum 768px */
-  body {
-      background-color: lightblue;
-  }
-}
-
-.box {
-  width: 50%; /* Lebar 50% dari kontainer */
-}
-
-img {
-  max-width: 100%;
-  height: auto; /* Memastikan gambar tidak terdistorsi */
-}
-
 /* ----- GLOBAL BUTTON DESIGN ----- */
 .btn {
   font-weight: 500;
@@ -209,13 +190,7 @@ body {
 .container {
   width: 100%;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
 }
-.item {
-  flex: 1 1 100%; /* Item akan mengambil 100% lebar pada layar kecil */
-}
-
 /* ----- NAVIGATION BAR ----- */
 nav {
   position: fixed;
